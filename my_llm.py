@@ -24,19 +24,19 @@ llm = ChatOpenAI(
     api_key=ALIYUN_API_KEY,
     base_url=ALIYUN_BASE_URL
 )
-embedding = OpenAIEmbeddings(
-    api_key=ALIYUN_API_KEY,
-    base_url=ALIYUN_BASE_URL,
-    model="text-embedding-v4",
-    dimensions=1024,
-    check_embedding_ctx_length=False  # 关键参数
-)
+# embedding = OpenAIEmbeddings(
+#     api_key=ALIYUN_API_KEY,
+#     base_url=ALIYUN_BASE_URL,
+#     model="text-embedding-v4",
+#     dimensions=1024,
+#     check_embedding_ctx_length=False  # 关键参数
+# )
 
-multiModal_llm = ChatOpenAI(  # 多模态大模型
-    model='qwen3-vl-plus',
-    api_key=ALIYUN_API_KEY,
-    base_url=ALIYUN_BASE_URL,
-)
+# multiModal_llm = ChatOpenAI(  # 多模态大模型
+#     model='qwen3-vl-plus',
+#     api_key=ALIYUN_API_KEY,
+#     base_url=ALIYUN_BASE_URL,
+# )
 # print(embedding.embed_query("今天，北京的天气怎么样？"))
 
 # llm = ChatDeepSeek(
