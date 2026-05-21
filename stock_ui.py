@@ -1,4 +1,5 @@
 import json
+import os
 
 import gradio as gr
 from langchain_core.output_parsers import JsonOutputParser
@@ -135,7 +136,7 @@ def load_history():
 # ==================== Gradio UI ====================
 
 #demo
-with gr.Blocks(title="股票 AI 分析", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="股票 AI 分析") as demo:
     gr.Markdown("# 股票 AI 结构化分析")
 
     stock_data_input = gr.Textbox(
@@ -166,4 +167,4 @@ with gr.Blocks(title="股票 AI 分析", theme=gr.themes.Soft()) as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 10000)))
